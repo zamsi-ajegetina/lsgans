@@ -1,0 +1,16 @@
+# Vanilla DCGAN baseline on CelebA (64x64)
+# Uses sigmoid cross-entropy loss (regular GAN)
+exp_name: dcgan_celeba
+dataset: celeba
+data_root: data/celeba
+loss: vanilla
+optimizer: adam
+latent_dim: 1024
+batch_size: 64
+n_epochs: 30
+lr: 0.0002
+beta1: 0.5
+use_bn: true
+num_workers: 4
+seed: 42
+output_dir: experiments

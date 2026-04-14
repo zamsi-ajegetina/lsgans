@@ -1,0 +1,16 @@
+# Stability ablation: LSGAN without BN in Generator (BN_G experiment)
+# Replicates Section 4.3 of the paper using Adam optimizer
+exp_name: lsgan_celeba_nobn_g_adam
+dataset: celeba
+data_root: data/celeba
+loss: lsgan
+optimizer: adam
+latent_dim: 1024
+batch_size: 64
+n_epochs: 20
+lr: 0.0002
+beta1: 0.5
+use_bn: false   # removes BN from both G and D (BN_GD experiment)
+num_workers: 4
+seed: 42
+output_dir: experiments

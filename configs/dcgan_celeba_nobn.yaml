@@ -1,0 +1,16 @@
+# Stability ablation: vanilla GAN without BN in Generator+Discriminator
+# Replicates Section 4.3 baseline using Adam optimizer
+exp_name: dcgan_celeba_nobn_gd_adam
+dataset: celeba
+data_root: data/celeba
+loss: vanilla
+optimizer: adam
+latent_dim: 1024
+batch_size: 64
+n_epochs: 20
+lr: 0.0002
+beta1: 0.5
+use_bn: false
+num_workers: 4
+seed: 42
+output_dir: experiments

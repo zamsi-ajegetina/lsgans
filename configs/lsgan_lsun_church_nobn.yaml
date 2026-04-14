@@ -1,0 +1,16 @@
+# Stability ablation: LSGAN without BN (BN_GD) on LSUN Church
+# Replicates Section 4.3 stability experiment
+exp_name: lsgan_lsun_church_nobn
+dataset: lsun_church_npy
+data_root: data/church_outdoor_train_lmdb_color_64.npy
+loss: lsgan
+optimizer: adam
+latent_dim: 1024
+batch_size: 64
+n_epochs: 20
+lr: 0.0002
+beta1: 0.5
+use_bn: false
+num_workers: 2
+seed: 42
+output_dir: experiments
